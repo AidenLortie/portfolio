@@ -9,14 +9,16 @@
     <link href="./css/style.css" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="./js/header.js" defer></script>
 </head>
 <body class="bg-gray-900 text-gray-50 font-sans min-h-screen flex flex-col">
 <header class="flex flex-col md:flex-row w-max min-w-full  bg-green-700 space-x-1 items-center justify-center">
-    <a href="https://alortie.dev"
-       class="text-xl w-full md:w-40 px-2 py-6 duration-250 ease-in hover:bg-green-400 text-center">Aiden
-        Lortie</a>
+    <div class="flex w-full md:max-w-50 h-full justify-center items-center md:items-start md:justify-normal">
+        <a href="https://alortie.dev" class="text-xl w-full md:w-40 px-2 py-6 duration-250 ease-in hover:bg-green-400 text-center">Aiden Lortie</a>
+        <img id="navHide" type="svg" src="./img/down.svg" class="hover:cursor-pointer w-10 md:hidden invert" alt="Show Nav">
+    </div>
     <div class="md:flex-grow"></div>
-    <nav class="h-full w-full md:w-5/12 flex justify-center items-center">
+    <nav id="headerNav" class="hidden h-full w-full md:w-5/12 md:flex justify-center items-center">
         <ul class="flex-grow">
             <li class="flex flex-col-reverse md:flex-row-reverse gap-1 h-full">
                 <a href="./about.html" class="w-full md:w-3/12 flex justify-center items-center py-6 duration-250 ease-in hover:bg-green-400">About Me</a>
@@ -26,10 +28,13 @@
         </ul>
     </nav>
 </header>
-<main class="flex-grow flex flex-col items-center justify-center gap-5">
-    <section class="text-center md:flex md:flex-row justify-center items-center gap-4">
-        <h1 class="text-2xl">Site Under Development</h1>
-        <img src="https://alortie.dev/img/forks.jpg" alt="img" id="topImg" height="500" width="500">
+<main class="flex-grow flex flex-col items-center justify-center gap-5 m-5">
+    <section class="text-center md:flex md:flex-row justify-center items-center">
+        <div class="bg-emerald-700 md:h-150 flex flex-col justify-center items-center p-4">
+            <h1 class="text-4xl font-bold">Aiden Lortie</h1>
+            <p>Software Engineer / Full stack web dev</p>
+        </div>
+        <img class="h-150 w-auto" src="https://alortie.dev/img/forks.jpg" alt="img" id="topImg" height="500" width="500">
     </section>
     <section class="bg-blue-900 bg-opacity-50 w-9/12 p-5 rounded filter backdrop-blur text-center">
         <p class="bg-accent-50">
