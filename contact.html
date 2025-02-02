@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Aiden Lortie | About</title>
+    <title>Aiden Lortie | Contact</title>
     <link href="css/style.css" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
@@ -29,19 +29,36 @@
     </nav>
 </header>
 <main class="flex-grow flex flex-col items-center justify-center gap-5 m-5">
-    <section class="text-center md:flex flex-col justify-center items-center bg-blue-950 p-4 rounded-sm gap-4">
-        <h1 class="text-4xl font-bold">About Me</h1>
-        <p class="flex">
-            19-year-old Computer Science student at Lakehead University. I have a passion for software development and
-            am always eager to learn new things. I have experience with a variety of programming languages and tools,
-            including Java, Python, C, C++, HTML, CSS, JavaScript, and more.
-        </p>
-    </section>
-    <section class="bg-blue-900 bg-opacity-50 w-9/12 p-5 rounded filter backdrop-blur text-center">
-        <p class="bg-accent-50">
-            NOTICE - This site is currently under construction. As such, some aspects may be incomplete or missing. Please check back later for updates.
-        </p>
-    </section>
+    <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-4 bg-emerald-600 p-4 rounded-sm items-center justify-center">
+
+        <!-- Replace with your Access Key -->
+        <input type="hidden" name="access_key" value="ab6ac706-295d-45a1-9a17-8c705b0bb10a">
+
+        <!-- Form Inputs. Each input must have a name="" attribute -->
+        <section class="flex flex-row gap-4">
+        <section class="flex flex-col">
+        <label for="name">Name</label>
+        <input class="bg-white rounded-sm" type="text" name="name" id="name" required>
+        </section>
+        <section class="flex flex-col">
+        <label for="email">Email</label>
+        <input class="bg-white rounded-sm" type="email" name="email" id="email" required>
+        </section>
+        </section>
+        <section class="flex flex-col w-full">
+        <label for="message">Message</label>
+        <textarea class="bg-white rounded-sm" name="message" id="message" required></textarea>
+        </section>
+
+        <!-- Honeypot Spam Protection -->
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+        <!-- Custom Confirmation / Success Page -->
+        <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+        <button type="submit" class="bg-blue-800 w-fit p-2 rounded-sm">Submit Form</button>
+
+    </form>
 </main>
 <footer class="flex h-16 w-full bg-emerald-900 items-center justify-center">
     &copy;&nbsp;Aiden Lortie 2025
