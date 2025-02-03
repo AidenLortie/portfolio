@@ -28,7 +28,12 @@
         </ul>
     </nav>
 </header>
-<main class="flex-grow flex flex-col items-center justify-center gap-5 m-5">
+<main class="flex-grow flex flex-col md:flex-row min-h-fit items-center justify-center m-5">
+    <!--
+    <section class="bg-emerald-600 p-4">
+        <h1 class=" text-4xl font-bold bg-emerald-600 h-full">Contact Me</h1>
+    </section>
+    -->
     <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-4 bg-emerald-600 p-4 rounded-sm items-center justify-center">
 
         <!-- Replace with your Access Key -->
@@ -38,16 +43,16 @@
         <section class="flex flex-row gap-4">
         <section class="flex flex-col">
         <label for="name">Name</label>
-        <input class="bg-white rounded-sm" type="text" name="name" id="name" required>
+        <input class="bg-white text-black p-2 rounded-sm" type="text" name="name" id="name" required>
         </section>
         <section class="flex flex-col">
         <label for="email">Email</label>
-        <input class="bg-white rounded-sm" type="email" name="email" id="email" required>
+        <input class="bg-white text-black p-2 rounded-sm" type="email" name="email" id="email" required>
         </section>
         </section>
         <section class="flex flex-col w-full">
         <label for="message">Message</label>
-        <textarea class="bg-white rounded-sm" name="message" id="message" required></textarea>
+        <textarea class="bg-white text-black p-2 rounded-sm" name="message" id="message" required></textarea>
         </section>
 
         <!-- Honeypot Spam Protection -->
